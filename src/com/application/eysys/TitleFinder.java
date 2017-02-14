@@ -24,7 +24,11 @@ public class TitleFinder {
 
 
     public String find(String s) {
-
+        for(String string: stringList) {
+            if(s.contains(string)) return string;
+            String[] searchString = string.split(" ");
+            if(searchString.length > 1) return string;
+        }
         return "not found, try another search term";
     }
 }
